@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,300;1,400;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 .header {
   background-color: white;
   margin: 0;
@@ -29,6 +23,80 @@ body {
   top: 20px;
   left: 50px;
   font-size: 20px;
+}
+
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.pied {
+  background-color: #343434;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+}
+.pied__logo {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 20px 0;
+}
+.pied__lien {
+  display: flex;
+  flex-direction: column;
+}
+.pied__lien--bas {
+  margin-bottom: 10px;
+}
+.pied__lien--bas a {
+  text-decoration: none;
+  color: white;
+}
+.pied__lien--bas a i {
+  font-size: 15px;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.restaurant__bouton {
+  font-size: 16px;
+  opacity: 1;
+  background: linear-gradient(0.5turn, #ff79da 0%, #9356dc 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  margin: 20px;
+}
+.restaurant__bouton:hover {
+  opacity: 0.9;
+  box-shadow: 5px 5px 10px #343434;
+}
+
+i.fas.fa-heart.plein {
+  background: linear-gradient(0.5turn, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+i.fas.fa-heart.plein:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+
+i.far.fa-heart.vide {
+  color: black;
+  position: absolute;
+}
+i.far.fa-heart.vide:hover {
+  color: transparent;
 }
 
 .restaurant__recherche {
@@ -74,17 +142,6 @@ body {
   margin-bottom: 0;
   font-size: 18px;
 }
-.reservation__bouton {
-  font-size: 16px;
-  opacity: 1;
-  background: linear-gradient(0.5turn, #ff79da 0%, #9356dc 100%);
-  color: white;
-  padding: 15px;
-  border-radius: 30px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-  border: none;
-  cursor: pointer;
-}
 
 .fonctionnement {
   margin: 40px 20px 50px 20px;
@@ -119,21 +176,17 @@ body {
   width: 100%;
   cursor: pointer;
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
-}
-.fonctionnement__fonction i {
-  color: #9a9a9a;
-  font-size: 18px;
+  transition: all 400ms;
 }
 .fonctionnement__fonction:hover {
-  background-color: #f2eafb;
-}
-.fonctionnement__fonction:hover i:hover {
   color: #9356dc;
+  background-color: #f2eafb;
 }
 .fonctionnement__fonction p {
   margin: 0 20px;
   font-size: 16px;
   font-weight: bold;
+  color: black;
 }
 
 .restaurants {
@@ -176,10 +229,9 @@ body {
   background: #85dcc7;
   border-radius: 2px;
   border: none;
-  padding: 5px 10px;
+  padding: 5px 10px 10px 10px;
   color: #217460;
   font-weight: bold;
-  font-size: 14px;
 }
 .restaurants__restaurant--carte-description {
   display: flex;
@@ -198,67 +250,10 @@ body {
 }
 
 .restaurants__restaurant--carte-icone {
-  position: relative;
   font-size: 24px;
-}
-
-i.fas.fa-heart.plein {
-  background: linear-gradient(0.5turn, #ff79da 0%, #9356dc 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  opacity: 0;
-}
-i.fas.fa-heart.plein:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-i.far.fa-heart.vide {
-  color: black;
-  position: absolute;
-}
-i.far.fa-heart.vide:hover {
-  color: transparent;
-}
-
-footer {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.pied {
-  background-color: #343434;
   display: flex;
-  flex-direction: column;
-  padding: 0 40px;
-}
-.pied__logo {
-  color: white;
-  font-family: "Shrikhand", cursive;
-  font-size: 20px;
-  text-decoration: none;
-  margin: 20px 0;
-}
-.pied__lien {
-  display: flex;
-  flex-direction: column;
-}
-.pied__lien--bas {
-  margin-bottom: 10px;
-}
-.pied__lien--bas a {
-  text-decoration: none;
-  color: white;
-}
-.pied__lien--bas a i {
-  font-size: 15px;
-  width: 20px;
-  margin-right: 5px;
 }
 
-/*Menu*/
 .carte {
   display: flex;
   flex-direction: column;
@@ -291,6 +286,7 @@ footer {
 }
 .carte__restaurant--nom h2 {
   margin: 20px;
+  font-family: Shrikhand, "cursive";
 }
 .carte__restaurant--nom i {
   margin: 20px;
@@ -305,8 +301,21 @@ footer {
 .carte__menu--restaurant {
   width: 100%;
 }
-.carte__menu--restaurant h3 {
+.carte__menu--restaurant-service {
   margin: 0 20px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: normal;
+}
+.carte__menu--restaurant-service::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 .carte__menu--restaurant-plats {
   background-color: white;
@@ -317,6 +326,7 @@ footer {
   align-items: center;
   margin: 20px;
   box-shadow: 3px 3px 5px #676767;
+  overflow: hidden;
 }
 .carte__menu--restaurant-plats-titre {
   display: flex;
@@ -336,6 +346,11 @@ footer {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.carte__menu--restaurant-plats-prix {
+  padding-left: 2em;
+  font-weight: bold;
+  margin: 0 10px;
+}
 .carte__menu--restaurant-plats-choix {
   display: flex;
   justify-content: center;
@@ -344,20 +359,25 @@ footer {
   border-radius: 0 15px 15px 0;
   width: 20%;
   height: 60px;
+  transition: transform 400ms ease-in-out;
+  transform: translateX(100%);
+  overflow: hidden;
+  color: white;
+  max-width: 0;
+}
+.carte__menu--restaurant-plats-choix i {
+  font-size: 24px;
+  transform: rotate(360deg);
+}
+.carte__menu--restaurant-plats:hover .carte__menu--restaurant-plats-choix {
+  transform: translateX(0);
+  max-width: 20%;
 }
 
-.carte__restaurant--bouton {
-  opacity: 1;
-  background: linear-gradient(0.5turn, #ff79da 0%, #9356dc 100%);
-  color: white;
-  padding: 15px;
-  border-radius: 30px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-  border: none;
-  cursor: pointer;
-  width: 150px;
-  align-items: center;
-  margin: 20px;
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

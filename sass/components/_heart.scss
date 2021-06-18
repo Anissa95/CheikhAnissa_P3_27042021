@@ -1,0 +1,20 @@
+i.fas.fa-heart.plein {
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        transition-duration: .30s;
+    }
+}
+
+i.far.fa-heart.vide {
+    color: black;
+    position: absolute;
+    &:hover {
+        color: transparent;
+    }
+}

@@ -1,0 +1,24 @@
+.header {
+    background-color: lighten($color, 50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-family: $secondary-font;
+    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20);
+    &__logo {
+        margin: 10px;
+        font-size: 26px;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+    &__fleche {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        font-size: 20px;
+    }
+}

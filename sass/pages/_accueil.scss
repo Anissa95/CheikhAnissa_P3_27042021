@@ -1,0 +1,150 @@
+.restaurant__recherche {
+    @include flexBox;
+    background-color: lighten($color, 45%);
+    height: 40px;
+    #search {
+        border: none;
+        background-color: lighten($color, 45%);
+    }
+    i {
+        margin: 10px 10px 10px 30px;
+    }
+     ::placeholder {
+        font-weight: bold;
+        color: black;
+    }
+}
+
+.reservation {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 50px;
+    background-color: lighten($color, 48%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    &__titre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 30px;
+    }
+    h2 {
+        margin: 0 20px;
+    }
+    p {
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+}
+
+.fonctionnement {
+    margin: 40px 20px 50px 20px;
+    h2 {
+        margin-left: 10px;
+    }
+    &__bloc {
+        display: flex;
+        align-items: center;
+        margin: 20px;
+    }
+    &__numero {
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        background-color: $color-primary;
+        @include flexBox;
+        color: $color-writen;
+        position: absolute;
+        left: 30px;
+    }
+    &__fonction {
+        background-color: lighten($color, 48%);
+        height: 30px;
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+        border-radius: 25px;
+        width: 100%;
+        cursor: pointer;
+        box-shadow: $box-shadow;
+        transition: all 400ms;
+        &:hover {
+            color: $color-primary;
+            background-color: lighten($color-primary, 35%);
+        }
+        p {
+            margin: 0 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+        }
+    }
+}
+
+.restaurants {
+    background-color: lighten($color, 48%);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    &__titre {
+        margin: 20px 30px 0 30px;
+    }
+    &__restaurant--carte {
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 15px;
+        margin: 20px;
+        cursor: pointer;
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        &-galerie {
+            position: relative;
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 15px 15px 0 0;
+            }
+            &-nouveau {
+                position: absolute;
+                right: 15px;
+                top: -5px;
+                margin-top: 20px;
+                background: darken($color-tertiary, 5%);
+                border-radius: 2px;
+                border: none;
+                padding: 5px 10px 10px 10px;
+                color: darken($color-tertiary, 45%);
+                font-weight: bold;
+            }
+        }
+        &-description {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 20px;
+            &-nom {
+                margin: 0;
+                h3 {
+                    margin: 0 0 5px 0;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.restaurants__restaurant--carte-icone {
+    font-size: 24px;
+    display: flex;
+}
