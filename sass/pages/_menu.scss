@@ -100,19 +100,23 @@
                 border-radius: 0 15px 15px 0;
                 width: 20%;
                 height: 60px;
-                transition: transform 400ms ease-in-out;
+                transition: all 1s ease-in;
                 transform: translateX(100%);
                 overflow: hidden;
                 color: $color-writen;
                 max-width: 0;
                 i {
                     font-size: 24px;
-                    transform: rotate( 360deg);
                 }
             }
-            &:hover &-choix {
+            &:hover>&-choix {
                 transform: translateX(0);
+                transform-origin: left 0;
                 max-width: 20%;
+                i {
+                    transform: rotate( 360deg);
+                    transition: all 1s linear;
+                }
             }
         }
     }

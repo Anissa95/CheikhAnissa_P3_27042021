@@ -76,6 +76,12 @@ footer {
 .restaurant__bouton:hover {
   opacity: 0.9;
   box-shadow: 5px 5px 10px #343434;
+  background: linear-gradient(45deg, #9356dc, #ff79da, #99E2D0);
+}
+
+.restaurants__restaurant--carte-icone {
+  font-size: 24px;
+  display: flex;
 }
 
 i.fas.fa-heart.plein {
@@ -88,7 +94,7 @@ i.fas.fa-heart.plein {
 i.fas.fa-heart.plein:hover {
   opacity: 1;
   transform: scale(1.1);
-  transition-duration: 0.3s;
+  transition: all 0.5s linear;
 }
 
 i.far.fa-heart.vide {
@@ -143,16 +149,27 @@ i.far.fa-heart.vide:hover {
   font-size: 18px;
 }
 
-.fonctionnement {
+.fonctionnements {
   margin: 40px 20px 50px 20px;
+  display: flex;
+  flex-direction: column;
 }
-.fonctionnement h2 {
+.fonctionnements h2 {
   margin-left: 10px;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
 }
 .fonctionnement__bloc {
   display: flex;
   align-items: center;
-  margin: 20px;
+  position: relative;
+  min-width: 300px;
+  margin: 20px 0;
 }
 .fonctionnement__numero {
   width: 25px;
@@ -164,7 +181,7 @@ i.far.fa-heart.vide:hover {
   justify-content: center;
   color: white;
   position: absolute;
-  left: 30px;
+  left: -10px;
 }
 .fonctionnement__fonction {
   background-color: #fafafa;
@@ -198,6 +215,11 @@ i.far.fa-heart.vide:hover {
 .restaurants__titre {
   margin: 20px 30px 0 30px;
 }
+.restaurants__liste {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 .restaurants__restaurant--carte {
   height: 280px;
   display: flex;
@@ -206,7 +228,13 @@ i.far.fa-heart.vide:hover {
   border-radius: 15px;
   margin: 20px;
   cursor: pointer;
+  width: 100%;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__restaurant--carte {
+    width: 45%;
+  }
 }
 .restaurants__restaurant--carte a {
   text-decoration: none;
@@ -247,11 +275,6 @@ i.far.fa-heart.vide:hover {
 }
 .restaurants__restaurant--carte-description-nom p {
   margin: 0;
-}
-
-.restaurants__restaurant--carte-icone {
-  font-size: 24px;
-  display: flex;
 }
 
 .carte {
@@ -359,7 +382,7 @@ i.far.fa-heart.vide:hover {
   border-radius: 0 15px 15px 0;
   width: 20%;
   height: 60px;
-  transition: transform 400ms ease-in-out;
+  transition: all 1s ease-in;
   transform: translateX(100%);
   overflow: hidden;
   color: white;
@@ -367,13 +390,152 @@ i.far.fa-heart.vide:hover {
 }
 .carte__menu--restaurant-plats-choix i {
   font-size: 24px;
-  transform: rotate(360deg);
 }
-.carte__menu--restaurant-plats:hover .carte__menu--restaurant-plats-choix {
+.carte__menu--restaurant-plats:hover > .carte__menu--restaurant-plats-choix {
   transform: translateX(0);
+  transform-origin: left 0;
   max-width: 20%;
 }
+.carte__menu--restaurant-plats:hover > .carte__menu--restaurant-plats-choix i {
+  transform: rotate(360deg);
+  transition: all 1s linear;
+}
 
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  background-color: #F6F6F6;
+  animation: loaderNone 3s linear;
+  opacity: 0;
+}
+
+.loader__icone {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  animation: rotateDroite 6S linear infinite;
+}
+.loader__icone i {
+  position: absolute;
+}
+.loader__icone .fa-utensils {
+  font-size: 40px;
+  padding: 0;
+  margin: 0;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+.loader__icone .deg0 {
+  top: 0;
+  left: 130px;
+  color: #9356DC;
+}
+.loader__icone .deg90 {
+  transform: rotate(90deg);
+  top: 130px;
+  right: 3px;
+  color: #ff79DA;
+}
+.loader__icone .deg180 {
+  transform: rotate(180deg);
+  bottom: 0;
+  left: 130px;
+  color: #9356DC;
+}
+.loader__icone .deg270 {
+  transform: rotate(270deg);
+  top: 130px;
+  left: 3px;
+  color: #ff79DA;
+}
+
+.loader__cercle1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-top: 5px solid #9356dc;
+  border-left: 5px solid #ff79da;
+  border-bottom: 5px solid #99E2D0;
+  border-radius: 50%;
+  animation: rotateGauche 3s linear infinite;
+}
+
+.loader__cercle2 {
+  position: absolute;
+  width: 335px;
+  height: 335px;
+  border-top: 5px solid #9356dc;
+  border-left: 5px solid #ff79da;
+  border-bottom: 5px solid #99E2D0;
+  border-radius: 50%;
+  animation: rotateDroite 3s linear infinite;
+}
+
+.loader__titre {
+  position: absolute;
+  font-size: 30px;
+  font-family: "Shrikhand", cursive;
+}
+
+body {
+  animation: noscroll 3s ease;
+}
+
+@keyframes noscroll {
+  0% {
+    overflow: hidden;
+  }
+  90% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
+@keyframes rotateGauche {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotateDroite {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loaderNone {
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  95% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;

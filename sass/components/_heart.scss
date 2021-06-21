@@ -1,3 +1,8 @@
+.restaurants__restaurant--carte-icone {
+    font-size: 24px;
+    display: flex;
+}
+
 i.fas.fa-heart.plein {
     background: $gradient;
     background-clip: text;
@@ -7,7 +12,7 @@ i.fas.fa-heart.plein {
     &:hover {
         opacity: 1;
         transform: scale(1.1);
-        transition-duration: .30s;
+        transition: all .5s linear;
     }
 }
 

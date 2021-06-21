@@ -5,5 +5,6 @@
     &:hover {
         opacity: 0.9;
         box-shadow: 5px 5px 10px darken($color, 30);
+        background: linear-gradient(45deg, #9356dc, #ff79da, #99E2D0);
     }
 }
