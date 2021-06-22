@@ -62,7 +62,7 @@
     width: 200px;
     height: 200px;
     border-top: 5px solid $color-primary;
-    border-left: 5px solid $color-secondary;
+    border-left: 5px dashed $color-secondary;
     border-bottom: 5px solid $color-tertiary;
     border-radius: 50%;
     animation: rotateGauche 3s linear infinite;
@@ -73,7 +73,7 @@
     width: 335px;
     height: 335px;
     border-top: 5px solid $color-primary;
-    border-left: 5px solid $color-secondary;
+    border-left: 5px dashed $color-secondary;
     border-bottom: 5px solid $color-tertiary;
     border-radius: 50%;
     animation: rotateDroite 3s linear infinite;

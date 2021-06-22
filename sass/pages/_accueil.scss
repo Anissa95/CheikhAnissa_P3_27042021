@@ -1,10 +1,10 @@
 .restaurant__recherche {
     @include flexBox;
-    background-color: lighten($color, 45%);
-    height: 40px;
+    background-color: lighten($color, 43%);
+    height: 50px;
     #search {
         border: none;
-        background-color: lighten($color, 45%);
+        background-color: lighten($color, 43%);
     }
     i {
         margin: 10px 10px 10px 30px;
@@ -18,8 +18,8 @@
 .reservation {
     width: 100%;
     margin: 0;
-    padding-bottom: 50px;
-    background-color: lighten($color, 48%);
+    padding-bottom: 40px;
+    background-color: lighten($color, 46%);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -35,17 +35,17 @@
         margin: 0 20px;
     }
     p {
-        margin-bottom: 0;
+        margin: 10px 0;
         font-size: 18px;
     }
 }
 
 .fonctionnements {
-    margin: 40px 20px 50px 20px;
+    margin: 30px 20px 60px 20px;
     display: flex;
     flex-direction: column;
     h2 {
-        margin-left: 10px;
+        margin: 10px 5px;
     }
 }
 
@@ -59,7 +59,7 @@
         align-items: center;
         position: relative;
         min-width: 300px;
-        margin: 20px 0;
+        margin: 10px 0;
     }
     &__numero {
         width: 25px;
@@ -72,7 +72,7 @@
         left: -10px;
     }
     &__fonction {
-        background-color: lighten($color, 48%);
+        background-color: lighten($color, 46%);
         height: 30px;
         padding: 20px 30px;
         display: flex;
@@ -84,7 +84,7 @@
         transition: all 400ms;
         &:hover {
             color: $color-primary;
-            background-color: lighten($color-primary, 35%);
+            background-color: lighten($color-primary, 37%);
         }
         p {
             margin: 0 20px;
@@ -96,8 +96,8 @@
 }
 
 .restaurants {
-    background-color: lighten($color, 48%);
-    padding: 20px 0;
+    background-color: lighten($color, 46%);
+    padding: 30px 0 60px 0;
     display: flex;
     flex-direction: column;
     &__titre {
@@ -109,12 +109,12 @@
         justify-content: space-around;
     }
     &__restaurant--carte {
-        height: 280px;
+        height: 250px;
         display: flex;
         flex-direction: column;
         background-color: white;
         border-radius: 15px;
-        margin: 20px;
+        margin: 10px 20px;
         cursor: pointer;
         width: 100%;
         box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
@@ -129,7 +129,7 @@
             position: relative;
             img {
                 width: 100%;
-                height: 200px;
+                height: 180px;
                 object-fit: cover;
                 border-radius: 15px 15px 0 0;
             }
@@ -141,7 +141,7 @@
                 background: darken($color-tertiary, 5%);
                 border-radius: 2px;
                 border: none;
-                padding: 5px 10px 10px 10px;
+                padding: 7px 10px 5px 10px;
                 color: darken($color-tertiary, 45%);
                 font-weight: bold;
             }
