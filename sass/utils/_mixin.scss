@@ -10,6 +10,11 @@
     min-width: 170px;
 }
 
+@mixin style-a {
+    text-decoration: none;
+    color: black;
+}
+
 @mixin flexBox {
     display: flex;
     align-items: center;

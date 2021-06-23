@@ -58,8 +58,14 @@
         display: flex;
         align-items: center;
         position: relative;
-        min-width: 300px;
-        margin: 10px 0;
+        width: 100%;
+        margin: 10px 10px;
+        @include tablette {
+            margin: 10px 50px;
+        }
+        @include desktop {
+            width: 300px;
+        }
     }
     &__numero {
         width: 25px;
@@ -82,9 +88,10 @@
         cursor: pointer;
         box-shadow: $box-shadow;
         transition: all 400ms;
+        color: $color;
         &:hover {
             color: $color-primary;
-            background-color: lighten($color-primary, 37%);
+            background-color: lighten($color-primary, 35%);
         }
         p {
             margin: 0 20px;
@@ -120,6 +127,7 @@
         box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
         @include desktop {
             width: 45%;
+            height: 280px;
         }
         a {
             text-decoration: none;
@@ -132,6 +140,9 @@
                 height: 180px;
                 object-fit: cover;
                 border-radius: 15px 15px 0 0;
+                @include desktop {
+                    height: 200px;
+                }
             }
             &-nouveau {
                 position: absolute;

@@ -19,6 +19,7 @@
         align-items: center;
         transform: translateY(20px);
         padding-bottom: 60px;
+        margin: 20px 0;
         &--nom {
             display: flex;
             justify-content: space-between;
@@ -28,6 +29,9 @@
             h2 {
                 margin: 20px;
                 font-family: Shrikhand, "cursive";
+                @include desktop {
+                    font-size: 30px;
+                }
             }
             i {
                 margin: 20px;
