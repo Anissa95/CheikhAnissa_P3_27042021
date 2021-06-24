@@ -250,11 +250,20 @@ i.far.fa-heart.vide:hover {
   width: 100%;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
+@media screen and (max-width: 1023px) and (min-width: 599px) {
+  .restaurants__restaurant--carte {
+    margin: 30px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .restaurants__restaurant--carte {
     width: 45%;
     height: 280px;
   }
+}
+.restaurants__restaurant--carte:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
 }
 .restaurants__restaurant--carte a {
   text-decoration: none;
@@ -306,9 +315,10 @@ i.far.fa-heart.vide:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: -60px;
 }
 .carte__image {
-  height: 200px;
+  height: 300px;
 }
 .carte__image img {
   width: 100%;
@@ -322,9 +332,8 @@ i.far.fa-heart.vide:hover {
   border-radius: 50px 50px 0 0;
   background-color: whitesmoke;
   align-items: center;
-  transform: translateY(20px);
-  padding-bottom: 60px;
-  margin: 20px 0;
+  transform: translateY(-60px);
+  padding-bottom: 50px;
 }
 .carte__restaurant--nom {
   display: flex;

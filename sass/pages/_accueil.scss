@@ -124,10 +124,17 @@
         margin: 10px 20px;
         cursor: pointer;
         width: 100%;
+        @include tablette {
+            margin: 30px;
+        }
         box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
         @include desktop {
             width: 45%;
             height: 280px;
+        }
+        &:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s;
         }
         a {
             text-decoration: none;
