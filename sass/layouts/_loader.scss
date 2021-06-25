@@ -79,22 +79,6 @@
     font-family: $secondary-font;
 }
 
-body {
-    animation: noscroll 3s ease-out;
-}
-
-@keyframes noscroll {
-    0% {
-        overflow: hidden;
-    }
-    90% {
-        overflow: hidden;
-    }
-    100% {
-        overflow: visible;
-    }
-}
-
 @keyframes rotateGauche {
     0% {
         transform: rotate(0deg);
