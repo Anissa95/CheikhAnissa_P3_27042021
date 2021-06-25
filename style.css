@@ -216,7 +216,6 @@ i.far.fa-heart.vide:hover {
 .fonctionnement__fonction:hover {
   color: #9356dc;
   background-color: #f2eafb;
-  box-shadow: 5px 5px 10px #343434;
 }
 .fonctionnement__fonction p {
   margin: 0 20px;
