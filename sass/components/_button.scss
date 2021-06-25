@@ -3,11 +3,8 @@
     @include btn;
     margin: 20px;
     box-shadow: $box-shadow;
-    a {
-        @include style-a;
-        color: $color-writen;
-        font-weight: bold;
-    }
+    @include style-a;
+    color: $color-writen;
     &:hover {
         opacity: 0.9;
         box-shadow: $box-shadow-hover;

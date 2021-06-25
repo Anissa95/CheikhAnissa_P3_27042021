@@ -84,6 +84,9 @@
         box-shadow: $box-shadow;
         transition: all 400ms;
         color: $color;
+         ::before {
+            font-size: 18px;
+        }
         &:hover {
             color: $color-primary;
             background-color: lighten($color-primary, 35%);
