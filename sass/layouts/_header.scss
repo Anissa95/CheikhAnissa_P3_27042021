@@ -2,8 +2,7 @@
     background-color: lighten($color, 50%);
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    @include flexBox;
     position: relative;
     font-family: $secondary-font;
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.20);

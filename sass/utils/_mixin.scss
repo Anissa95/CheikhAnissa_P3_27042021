@@ -21,6 +21,17 @@
     justify-content: center;
 }
 
+@mixin border-loader {
+    border-top: 5px solid $color-primary;
+    border-left: 5px dashed $color-secondary;
+    border-bottom: 5px solid $color-tertiary;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
 @mixin desktop {
     @media screen and (min-width: 1024px) {
         @content;

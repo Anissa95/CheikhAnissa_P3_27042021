@@ -1,10 +1,8 @@
 .loader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flexBox;
     overflow: hidden;
-    z-index: 10;
+    flex-direction: column;
+    z-index: 1;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -61,10 +59,8 @@
     position: absolute;
     width: 200px;
     height: 200px;
-    border-top: 5px solid $color-primary;
-    border-left: 5px dashed $color-secondary;
-    border-bottom: 5px solid $color-tertiary;
-    border-radius: 50%;
+    @include border-loader;
+    border-radius: $border-rond;
     animation: rotateGauche 3s linear infinite;
 }
 
@@ -72,10 +68,8 @@
     position: absolute;
     width: 335px;
     height: 335px;
-    border-top: 5px solid $color-primary;
-    border-left: 5px dashed $color-secondary;
-    border-bottom: 5px solid $color-tertiary;
-    border-radius: 50%;
+    @include border-loader;
+    border-radius: $border-rond;
     animation: rotateDroite 3s linear infinite;
 }
 
@@ -86,7 +80,7 @@
 }
 
 body {
-    animation: noscroll 3s ease;
+    animation: noscroll 3s ease-out;
 }
 
 @keyframes noscroll {
@@ -125,7 +119,6 @@ body {
         opacity: 1;
     }
     90% {
-        transform: translateY(100%);
         opacity: 1;
     }
     95% {

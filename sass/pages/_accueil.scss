@@ -20,14 +20,10 @@
     margin: 0;
     padding-bottom: 40px;
     background-color: lighten($color, 46%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    @include flexColumn;
     align-items: center;
     &__titre {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexColumn;
         text-align: center;
         margin: 30px;
     }
@@ -42,8 +38,7 @@
 
 .fonctionnements {
     margin: 30px 20px 60px 20px;
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     h2 {
         margin: 10px 5px;
     }
@@ -92,6 +87,7 @@
         &:hover {
             color: $color-primary;
             background-color: lighten($color-primary, 35%);
+            box-shadow: $box-shadow-hover;
         }
         p {
             margin: 0 20px;
@@ -105,8 +101,7 @@
 .restaurants {
     background-color: lighten($color, 46%);
     padding: 30px 0 60px 0;
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     &__titre {
         margin: 20px 30px 0 30px;
     }
@@ -117,8 +112,7 @@
     }
     &__restaurant--carte {
         height: 250px;
-        display: flex;
-        flex-direction: column;
+        @include flexColumn;
         background-color: white;
         border-radius: 15px;
         margin: 10px 20px;
