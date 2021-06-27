@@ -1,7 +1,7 @@
 .restaurant__bouton {
     font-size: 16px;
     @include btn;
-    margin: 20px;
+    margin-bottom: 20px;
     box-shadow: $box-shadow;
     @include style-a;
     color: $color-writen;

@@ -49,14 +49,14 @@ footer {
   display: flex;
   flex-direction: column;
 }
-.pied__lien--bas {
+.pied__lien.bas {
   margin-bottom: 10px;
 }
-.pied__lien--bas a {
+.pied__lien.bas a {
   text-decoration: none;
   color: white;
 }
-.pied__lien--bas a i {
+.pied__lien.bas a i {
   font-size: 15px;
   width: 20px;
   margin-right: 5px;
@@ -73,7 +73,7 @@ footer {
   border: none;
   cursor: pointer;
   min-width: 170px;
-  margin: 20px;
+  margin-bottom: 20px;
   box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   color: black;
@@ -85,7 +85,7 @@ footer {
   background: linear-gradient(45deg, #9356dc, #ff79da, #99E2D0);
 }
 
-.restaurants__restaurant--carte-icone {
+.carte__icone {
   font-size: 24px;
   display: flex;
 }
@@ -143,7 +143,7 @@ i.far.fa-heart.vide:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 30px;
+  margin: 40px 20px 20px 20px;
 }
 .reservation h2 {
   margin: 0 20px;
@@ -237,7 +237,8 @@ i.far.fa-heart.vide:hover {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.restaurants__restaurant--carte {
+
+.restaurants__carte {
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -249,39 +250,35 @@ i.far.fa-heart.vide:hover {
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 1023px) and (min-width: 599px) {
-  .restaurants__restaurant--carte {
+  .restaurants__carte {
     margin: 30px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .restaurants__restaurant--carte {
+  .restaurants__carte {
     width: 45%;
     height: 280px;
   }
 }
-.restaurants__restaurant--carte:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s;
-}
-.restaurants__restaurant--carte a {
+.restaurants__carte a {
   text-decoration: none;
   color: black;
 }
-.restaurants__restaurant--carte-galerie {
+.restaurants__carte__galerie {
   position: relative;
 }
-.restaurants__restaurant--carte-galerie img {
+.restaurants__carte__galerie img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 @media screen and (min-width: 1024px) {
-  .restaurants__restaurant--carte-galerie img {
+  .restaurants__carte__galerie img {
     height: 200px;
   }
 }
-.restaurants__restaurant--carte-galerie-nouveau {
+.restaurants__carte__galerie_nouveau {
   position: absolute;
   right: 15px;
   top: -5px;
@@ -293,19 +290,19 @@ i.far.fa-heart.vide:hover {
   color: #217460;
   font-weight: bold;
 }
-.restaurants__restaurant--carte-description {
+.restaurants__carte__description {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 10px 20px;
 }
-.restaurants__restaurant--carte-description-nom {
+.restaurants__carte__description_nom {
   margin: 0;
 }
-.restaurants__restaurant--carte-description-nom h3 {
+.restaurants__carte__description_nom h3 {
   margin: 0 0 5px 0;
 }
-.restaurants__restaurant--carte-description-nom p {
+.restaurants__carte__description_nom p {
   margin: 0;
 }
 
@@ -337,7 +334,7 @@ i.far.fa-heart.vide:hover {
   background-color: whitesmoke;
   align-items: center;
   transform: translateY(-60px);
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1024px) {
   .carte__restaurant {
@@ -346,19 +343,24 @@ i.far.fa-heart.vide:hover {
     border-radius: 50px 50px;
   }
 }
-.carte__restaurant--nom {
+.carte .nom__restaurant {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
   align-items: center;
   width: 100%;
 }
-.carte__restaurant--nom h2 {
+.carte .nom__restaurant h2 {
   margin-left: 40px;
   font-family: Shrikhand, "cursive";
-  font-size: 30px;
+  font-size: 24px;
 }
-.carte__restaurant--nom i {
+@media screen and (min-width: 1024px) {
+  .carte .nom__restaurant h2 {
+    font-size: 32px;
+  }
+}
+.carte .nom__restaurant i {
   margin: 20px;
 }
 
@@ -368,28 +370,29 @@ i.far.fa-heart.vide:hover {
   flex-wrap: wrap;
   max-width: 600px;
 }
-.carte__menu--restaurant {
+.carte__menu__restaurant {
   margin-bottom: 25px;
 }
 @media screen and (max-width: 1023px) and (min-width: 599px) {
-  .carte__menu--restaurant {
+  .carte__menu__restaurant {
     width: 100%;
     margin-right: 40px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .carte__menu--restaurant {
+  .carte__menu__restaurant {
     width: 100%;
   }
 }
-.carte__menu--restaurant-service {
+
+.restaurant__service {
   margin: 0 20px;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 0.5rem;
   font-weight: normal;
 }
-.carte__menu--restaurant-service::after {
+.restaurant__service::after {
   content: "";
   width: 3rem;
   height: 0.25rem;
@@ -398,7 +401,8 @@ i.far.fa-heart.vide:hover {
   left: 0;
   bottom: 0;
 }
-.carte__menu--restaurant-plats {
+
+.restaurant__plats {
   background-color: white;
   height: 70px;
   border-radius: 15px;
@@ -412,38 +416,38 @@ i.far.fa-heart.vide:hover {
   animation: apparition 3s ease-in-out;
 }
 @media screen and (max-width: 1023px) and (min-width: 599px) {
-  .carte__menu--restaurant-plats {
+  .restaurant__plats {
     width: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .carte__menu--restaurant-plats {
+  .restaurant__plats {
     width: 100%;
   }
 }
-.carte__menu--restaurant-plats-titre {
+.restaurant__plats__titre {
   display: flex;
   flex-direction: column;
   flex: 1;
   overflow: hidden;
   white-space: nowrap;
 }
-.carte__menu--restaurant-plats-titre h3 {
+.restaurant__plats__titre h3 {
   margin: 5px 10px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.carte__menu--restaurant-plats-titre p {
+.restaurant__plats__titre p {
   margin: 0 10px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.carte__menu--restaurant-plats-prix {
+.restaurant__plats__prix {
   padding-left: 2em;
   font-weight: bold;
   margin: 30px 10px 0 0;
 }
-.carte__menu--restaurant-plats-choix {
+.restaurant__plats__choix {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -457,14 +461,14 @@ i.far.fa-heart.vide:hover {
   color: white;
   max-width: 0;
 }
-.carte__menu--restaurant-plats-choix i {
+.restaurant__plats__choix i {
   font-size: 24px;
 }
-.carte__menu--restaurant-plats:hover > .carte__menu--restaurant-plats-choix {
+.restaurant__plats:hover > .restaurant__plats__choix {
   transform: translateX(0);
   max-width: 20%;
 }
-.carte__menu--restaurant-plats:hover > .carte__menu--restaurant-plats-choix i {
+.restaurant__plats:hover > .restaurant__plats__choix i {
   transform: rotate(360deg);
   transition: all 0.5s linear 0.5s;
 }

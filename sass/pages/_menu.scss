@@ -21,26 +21,29 @@
         background-color: lighten($color, 46%);
         align-items: center;
         transform: translateY(-60px);
-        padding-bottom: 50px;
+        padding-bottom: 60px;
         @include desktop {
             width: 80%;
             transform: translateY(-80px);
             border-radius: 50px 50px;
         }
-        &--nom {
-            display: flex;
-            justify-content: space-between;
-            margin: 10px 0;
-            align-items: center;
-            width: 100%;
-            h2 {
-                margin-left: 40px;
-                font-family: Shrikhand, "cursive";
-                font-size: 30px;
+    }
+    .nom__restaurant {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        align-items: center;
+        width: 100%;
+        h2 {
+            margin-left: 40px;
+            font-family: Shrikhand, "cursive";
+            font-size: 24px;
+            @include desktop {
+                font-size: 32px;
             }
-            i {
-                margin: 20px;
-            }
+        }
+        i {
+            margin: 20px;
         }
     }
 }
@@ -50,7 +53,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     max-width: 600px;
-    &--restaurant {
+    &__restaurant {
         margin-bottom: 25px;
         @include tablette {
             width: 100%;
@@ -59,84 +62,86 @@
         @include desktop {
             width: 100%;
         }
-        &-service {
-            margin: 0 20px;
-            text-transform: uppercase;
-            position: relative;
-            padding-bottom: 0.5rem;
-            font-weight: normal;
-            &::after {
-                content: "";
-                width: 3rem;
-                height: 0.25rem;
-                background-color: $color-tertiary;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-            }
-        }
-        &-plats {
-            background-color: $color-writen;
-            height: 70px;
-            border-radius: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 20px;
-            box-shadow: $box-shadow;
+    }
+}
+
+.restaurant__service {
+    margin: 0 20px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: normal;
+    &::after {
+        content: "";
+        width: 3rem;
+        height: 0.25rem;
+        background-color: $color-tertiary;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.restaurant__plats {
+    background-color: $color-writen;
+    height: 70px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    width: 300px;
+    animation: apparition 3s ease-in-out;
+    @include tablette {
+        width: 100%;
+    }
+    @include desktop {
+        width: 100%;
+    }
+    &__titre {
+        @include flexColumn;
+        flex: 1;
+        overflow: hidden;
+        white-space: nowrap;
+        h3 {
+            margin: 5px 10px;
+            text-overflow: ellipsis;
             overflow: hidden;
-            width: 300px;
-            animation: apparition 3s ease-in-out;
-            @include tablette {
-                width: 100%;
-            }
-            @include desktop {
-                width: 100%;
-            }
-            &-titre {
-                @include flexColumn;
-                flex: 1;
-                overflow: hidden;
-                white-space: nowrap;
-                h3 {
-                    margin: 5px 10px;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                }
-                p {
-                    margin: 0 10px;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                }
-            }
-            &-prix {
-                padding-left: 2em;
-                font-weight: bold;
-                margin: 30px 10px 0 0;
-            }
-            &-choix {
-                @include flexBox;
-                background-color: $color-tertiary;
-                border-radius: 0 15px 15px 0;
-                width: 20%;
-                height: 70px;
-                transition: all 1s ease-out;
-                transform: translateX(100%);
-                overflow: hidden;
-                color: $color-writen;
-                max-width: 0;
-                i {
-                    font-size: 24px;
-                }
-            }
-            &:hover>&-choix {
-                transform: translateX(0);
-                max-width: 20%;
-                i {
-                    transform: rotate( 360deg);
-                    transition: all .5s linear .5s;
-                }
-            }
+        }
+        p {
+            margin: 0 10px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+    &__prix {
+        padding-left: 2em;
+        font-weight: bold;
+        margin: 30px 10px 0 0;
+    }
+    &__choix {
+        @include flexBox;
+        background-color: $color-tertiary;
+        border-radius: 0 15px 15px 0;
+        width: 20%;
+        height: 70px;
+        transition: all 1s ease-out;
+        transform: translateX(100%);
+        overflow: hidden;
+        color: $color-writen;
+        max-width: 0;
+        i {
+            font-size: 24px;
+        }
+    }
+    &:hover>&__choix {
+        transform: translateX(0);
+        max-width: 20%;
+        i {
+            transform: rotate( 360deg);
+            transition: all .5s linear .5s;
         }
     }
 }
